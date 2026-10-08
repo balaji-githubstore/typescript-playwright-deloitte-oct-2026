@@ -1,4 +1,4 @@
-function areaOfCircle(radius: number): number {
+export function areaOfCircle(radius: number): number {
     return 3.14 * radius * radius;
 }
 
