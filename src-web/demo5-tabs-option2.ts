@@ -10,11 +10,14 @@ const page = await context.newPage();
 await page.goto("https://opensource-demo.orangehrmlive.com/");
 
 
-const popupPromise =page.waitForEvent("popup")
-await page.locator("xpath=//a[text()='OrangeHRM, Inc']").click();
-const newPage=await popupPromise ;
-newPage.waitForLoadState();
+// const popupPromise =page.waitForEvent("popup")
+// await page.locator("xpath=//a[text()='OrangeHRM, Inc']").click();
+// const newPage=await popupPromise ;
+// newPage.waitForLoadState();
 
+const [newPage,]=await Promise.all([page.waitForEvent("popup"),
+    page.locator("xpath=//a[text()='OrangeHRM, Inc']").click()])
+newPage.waitForLoadState();
 
 await newPage.locator("xpath=//button[text()='Allow all']").click();
 //click on book a free demo
