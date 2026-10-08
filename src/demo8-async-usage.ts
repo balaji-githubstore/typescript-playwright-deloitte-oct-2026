@@ -1,4 +1,4 @@
-import { Employee } from "./demo5-employee.ts";
+import { Employee } from "./demo5-employee-student.ts";
 
 async function getDBConnection(): Promise<string> {
 

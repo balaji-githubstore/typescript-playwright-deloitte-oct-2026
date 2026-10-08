@@ -1,4 +1,4 @@
-import { Employee } from "./demo5-employee.ts"
+import { Employee } from "./demo5-employee-student.ts"
 import { areaOfCircle } from "./demo2-methods.ts"
 
 //below make use of Employee template

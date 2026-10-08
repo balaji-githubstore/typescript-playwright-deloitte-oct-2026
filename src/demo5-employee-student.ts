@@ -22,3 +22,17 @@ export class Employee {
         return emp;
     }
 }
+
+export class Student{
+    public id?: number;
+    public name?: string;
+    public course?: string[];
+    public age?: number;
+
+    public displayStudentRecord(): void {
+        console.log(this.id);
+        console.log(this.name);
+        console.log(this.age);
+        console.log(this.course);
+    }
+}
