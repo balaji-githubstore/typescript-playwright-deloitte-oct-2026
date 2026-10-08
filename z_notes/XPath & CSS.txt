@@ -5,9 +5,38 @@ Relative XPath -
 //tagname[@attribute='']
 //tagname[text()='']
 
+Contains
+//tagname[contains(@attribute,'')]
+//tagname[contains(text()='')]
+
+ignore whitespace and check
+//tagname[normalize-space()='']
+
 
 Example: verify in chrome - ctrl+f
 //input[@id='Form_getForm_FullName']
 //button[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']
 
 //button[text()='Allow all']
+
+//a[text()='Login']
+//div[text()='I have a Corporate Account']
+//a[text()='Learn More']
+//a[text()='skip']
+//a[text()='Login using Username & Password']
+//input[@id='username']
+//button[text()='Proceed']
+//input[@id='password']
+
+//img[@alt='hide-password']
+//img[contains(@src,'hide-password.svg')]
+
+//button[text()='Sign In']
+
+//div[contains(text(),'not able to connect')]
+
+//input[contains(@id,'FullName')]
+//a[contains(text(),'Login using Username')]
+
+//button[text()=' Sign On ']
+//button[contains(text(),'Sign On')]

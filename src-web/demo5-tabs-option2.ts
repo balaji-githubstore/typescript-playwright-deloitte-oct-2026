@@ -17,6 +17,7 @@ await page.goto("https://opensource-demo.orangehrmlive.com/");
 
 const [newPage,]=await Promise.all([page.waitForEvent("popup"),
     page.locator("xpath=//a[text()='OrangeHRM, Inc']").click()])
+    
 newPage.waitForLoadState();
 
 await newPage.locator("xpath=//button[text()='Allow all']").click();
