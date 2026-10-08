@@ -15,4 +15,10 @@ export class Employee {
     public static getCompanyName(): void {
         console.log(Employee.companyName)
     }
+
+    public static getEmployeeInstance():Employee
+    {
+        let emp:Employee=new Employee();
+        return emp;
+    }
 }

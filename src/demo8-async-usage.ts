@@ -1,3 +1,5 @@
+import { Employee } from "./demo5-employee.ts";
+
 async function getDBConnection(): Promise<string> {
 
     for (let i = 1; i <= 10; i++) {
@@ -9,14 +11,21 @@ async function getDBConnection(): Promise<string> {
     return "DB connection success";
 }
 
+async function getEmployeeInstance(): Promise<Employee> {
+    let emp: Employee = new Employee();
+    return emp;
+}
+
 //takes 10sec to establish connection so triggering the method and moving on
-let runDBMethod=getDBConnection()
+let runDBMethod = getDBConnection()
 console.log("some other task like updating excel");
 console.log("some other task like updating excel");
 console.log("some other task like updating excel");
 console.log("some other task like updating excel");
 console.log("some other task like updating excel");
 
-let result:string= await runDBMethod
+let result: string = await runDBMethod
 
 console.log(result)
+
+let emp:Employee=await getEmployeeInstance()

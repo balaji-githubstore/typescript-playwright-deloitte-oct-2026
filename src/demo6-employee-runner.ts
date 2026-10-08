@@ -29,3 +29,10 @@ console.log(emp1 instanceof Employee)
 Employee.getCompanyName()
 
 console.log(areaOfCircle(2))
+
+
+let emp4:Employee=Employee.getEmployeeInstance();
+let emp5:Employee=Employee.getEmployeeInstance();
+
+emp4.displayEmployeeRecord();
+emp5.displayEmployeeRecord();

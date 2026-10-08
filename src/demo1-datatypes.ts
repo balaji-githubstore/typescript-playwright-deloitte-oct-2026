@@ -172,3 +172,9 @@ else if(typeof data2==="string")
 
 
 
+let z3=10
+
+z3=500
+
+const z4=10
+
