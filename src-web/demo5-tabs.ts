@@ -9,17 +9,14 @@ const page = await context.newPage();
 
 await page.goto("https://opensource-demo.orangehrmlive.com/");
 
-//trigger popup to track for new tab 
+
 const popupPromise =page.waitForEvent("popup")
-//click on link - OrangeHRM, Inc. that opens a new tab
 await page.locator("xpath=//a[text()='OrangeHRM, Inc']").click();
-//await and get new Page (new Tab)
 const newPage=await popupPromise ;
 newPage.waitForLoadState();
 
 
 await newPage.locator("xpath=//button[text()='Allow all']").click();
-
 //click on book a free demo
 //enter full name
 //close second tab
