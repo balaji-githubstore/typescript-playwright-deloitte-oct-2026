@@ -22,6 +22,17 @@ const page = await context.newPage();
 await page.goto("https://www.citigroup.com/global/about-us/global-presence/india");
 
 //complete the task
+await page.locator("xpath=//div[text()='My Account']").hover();
 
+
+const [newPage,]=await Promise.all([page.waitForEvent("popup"),
+    page.locator("xpath=//div[text()='Banking with Citi']").click()]);
+newPage.waitForLoadState();
+
+await newPage.locator("xpath=//input[@formcontrolname='username']").fill("john");
+await newPage.locator("xpath=//button[normalize-space()='Sign On']").click();
+
+const actualError=await newPage.locator("xpath=//span[contains(text(),'valid password')]").innerText();
+console.log(actualError);
 await page.waitForTimeout(5000);
 await browser.close();
