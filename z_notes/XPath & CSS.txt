@@ -12,6 +12,24 @@ Contains
 ignore whitespace and check for inner text
 //tagname[normalize-space()='']
 
+Grouping the xpath - starts at 1 - not recommended.
+(//a[text()='Become a member'])[1]
+
+Upload
+//input[@type='file']
+
+
+And-or 
+
+parent-child
+
+ancestor-descendant
+
+following-preceding 
+
+following-sibling 
+
+
 
 Example: verify in chrome - ctrl+f
 //input[@id='Form_getForm_FullName']
@@ -40,3 +58,9 @@ Example: verify in chrome - ctrl+f
 
 //button[text()=' Sign On ']
 //button[contains(text(),'Sign On')]
+
+
+//iframe[@name='vehicle-form']
+//iframe[@title='Vehicle registration form (frame one)']
+
+//iframe[contains(@src,'registration-form.html')]
