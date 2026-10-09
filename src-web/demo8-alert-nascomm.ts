@@ -9,6 +9,8 @@ const page = await context.newPage();
 
 await page.goto("https://nasscom.in/");
 
+
+// await page.locator("xpath=(//a[text()='DeepTech'])[1]").click();
 //click on Become a member
 await page.locator("xpath=(//a[text()='Become a member'])[1]").click();
 
