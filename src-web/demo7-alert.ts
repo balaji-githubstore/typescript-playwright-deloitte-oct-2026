@@ -16,7 +16,7 @@ page.on("dialog",async (dialog)=>{
     await dialog.accept();
 })
 
-page.locator("xpath=//input[@name='B1']").click();
+await page.locator("xpath=//input[@name='B1']").click();
 
 await page.waitForTimeout(5000);
 await browser.close();
