@@ -7,16 +7,17 @@ const context = await browser.newContext();
 //Page (tab1)
 const page = await context.newPage();
 
-await page.goto("https://echoecho.com/javascript4.htm");
+await page.goto("https://nasscom.in/");
 
-//modify the default behaviour of dialog in playwright 
-page.on("dialog",async (dialog)=>{
-    let actualAlertMessage=dialog.message();
-    console.log(actualAlertMessage);
-    await dialog.accept();
-})
+//click on Become a member
 
-page.locator("xpath=//input[@name='B1']").click();
+//Select company category as Indian
+
+//Enter Address as 24, Chennai, 600019
+
+//click on calculate fee 
+
+//get the alert message, print it and then handle it
 
 await page.waitForTimeout(5000);
 await browser.close();

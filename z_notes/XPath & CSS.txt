@@ -9,7 +9,7 @@ Contains
 //tagname[contains(@attribute,'')]
 //tagname[contains(text()='')]
 
-ignore whitespace and check
+ignore whitespace and check for inner text
 //tagname[normalize-space()='']
 
 
