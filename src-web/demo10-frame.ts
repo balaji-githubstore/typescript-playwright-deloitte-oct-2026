@@ -11,7 +11,22 @@ const page = await context.newPage();
 
 await page.goto("https://app.thetestingacademy.com/playwright/frames/");
 
-//enter vehicle name as Creta
 
+const vehicleFrame=page.frameLocator("xpath=//iframe[@name='vehicle-form']")
+
+//enter vehicle name as Creta
+await vehicleFrame.locator("xpath=//input[@name='vehicleName']").fill("creta");
+await vehicleFrame.locator("xpath=//input[@name='ownerName']").fill("john");
+
+//enter registration number - TN20AJ8787
+//select vechicle type as SUV
+//year as 2020
+//click on submit registration 
+await vehicleFrame.locator("xpath=//button[text()='Submit registration']").click();
+
+//get the json text shown and print in console. 
+//div[contains(text(),'vehicleName')]
+const actualValue=await vehicleFrame.locator("xpath=//div[@id='vehicle-output']").innerText();
+console.log(actualValue);
 await page.waitForTimeout(5000);
 await browser.close();
