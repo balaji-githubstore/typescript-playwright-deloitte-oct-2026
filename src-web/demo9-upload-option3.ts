@@ -9,12 +9,14 @@ const page = await context.newPage();
 
 await page.goto("https://www.ilovepdf.com/pdf_to_word");
 
-//option 2
-const fileChooserPromise=page.waitForEvent("filechooser");
-await page.locator("xpath=//span[text()='Select PDF file']").click();
-const fileChooser=await fileChooserPromise
+//option 3 - not recommended
+//register filechooser event so when upload windows comes, it will handle
+page.on("filechooser", async (fileChooser) => {
+    await fileChooser.setFiles("D:\\Mine\\Balaji Dinakaran Trainer Profile AI 2026.pdf");
+})
 
-await fileChooser.setFiles("D:\\Mine\\Balaji Dinakaran Trainer Profile AI 2026.pdf");
+await page.locator("xpath=//span[text()='Select PDF file']").click();
+
 
 await page.waitForTimeout(5000);
 await browser.close();
