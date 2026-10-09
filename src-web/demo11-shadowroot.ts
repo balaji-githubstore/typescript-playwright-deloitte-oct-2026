@@ -1,5 +1,6 @@
 
-//shadowroot element works only with CSS selector 
+//shadowroot element works only with CSS selector or default methods from playwright
+
 import { chromium, firefox } from "playwright"
 
 //BrowserInstance
