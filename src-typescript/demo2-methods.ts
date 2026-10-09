@@ -50,6 +50,6 @@ let myName: string = getAuthorName()
 console.log(myName)
 
 close()
-
+result = add(1,1)
 result = add(1,1,1)
 console.log(result)
