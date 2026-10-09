@@ -64,3 +64,21 @@ Example: verify in chrome - ctrl+f
 //iframe[@title='Vehicle registration form (frame one)']
 
 //iframe[contains(@src,'registration-form.html')]
+
+
+---------------------------------------
+CSS Selector https://www.w3schools.com/cssref/css_selectors.php
+#id
+.classname
+[attribute='']
+tagname[attribut='']
+
+Example:
+#authUser
+input[name='authUser']
+
+
+
+
+
+
