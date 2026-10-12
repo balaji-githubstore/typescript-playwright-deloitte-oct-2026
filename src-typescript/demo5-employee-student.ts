@@ -36,3 +36,6 @@ export class Student{
         console.log(this.course);
     }
 }
+
+
+

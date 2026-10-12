@@ -2,7 +2,7 @@
 import { chromium, firefox } from "playwright"
 
 //BrowserInstance
-const browser = await chromium.launch({ channel: "chrome", headless: false });
+const browser = await chromium.launch({  headless: false });
 //BrowserContext
 const context = await browser.newContext();
 //Page (tab1)
@@ -28,5 +28,5 @@ await page.locator("xpath=//select[@id='Form_getForm_NoOfEmployees']").selectOpt
 
 // click on Get a free demo
 await page.locator("xpath=//input[@id='Form_getForm_action_submitForm']").click();
-await page.waitForTimeout(5000);
+await page.waitForTimeout(2000);
 await browser.close();

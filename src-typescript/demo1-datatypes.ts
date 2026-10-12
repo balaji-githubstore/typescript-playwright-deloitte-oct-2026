@@ -178,3 +178,6 @@ z3=500
 
 const z4=10
 
+let browserDetails3 = { browserName: "chrome", browserVersion: 101, isMobile: true }
+
+console.log(browserDetails3.browserName)
