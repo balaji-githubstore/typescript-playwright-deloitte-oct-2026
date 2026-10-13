@@ -296,3 +296,5 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+test-data/secret.json
