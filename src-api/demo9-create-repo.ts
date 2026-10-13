@@ -1,8 +1,6 @@
 import { request } from "playwright";
 import fs from "fs";
 
-
-
 const token = JSON.parse(fs.readFileSync("test-data/secret.json", "utf-8"))["token"];
 console.log(token);
 
@@ -15,7 +13,6 @@ const reqBody = {
 
 const baseUrl = "https://api.github.com"
 const resource = "/user/repos"
-
 
 
 const context = await request.newContext();
