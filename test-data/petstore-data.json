@@ -1,0 +1,38 @@
+{
+    "addPet": {
+        "id": 2987,
+        "category": {
+            "id": 0,
+            "name": "string-1987"
+        },
+        "name": "doggie-2987",
+        "photoUrls": [
+            "string"
+        ],
+        "tags": [
+            {
+                "id": 0,
+                "name": "string"
+            }
+        ],
+        "status": "pending"
+    },
+    "updatePet": {
+        "id": 2987,
+        "category": {
+            "id": 0,
+            "name": "string-1987"
+        },
+        "name": "doggie-2987",
+        "photoUrls": [
+            "string"
+        ],
+        "tags": [
+            {
+                "id": 0,
+                "name": "string"
+            }
+        ],
+        "status": "pending"
+    }
+}
