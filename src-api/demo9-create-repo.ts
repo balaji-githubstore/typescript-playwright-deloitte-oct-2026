@@ -28,3 +28,5 @@ console.log(response.status());
 console.log(response.statusText());
 const jsonBody = await response.json();
 console.log(jsonBody);
+
+
